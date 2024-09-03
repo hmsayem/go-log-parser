@@ -13,7 +13,7 @@ func main() {
 		`{"level":"warn","msg":"This is a slog log","time":"2023-09-01T00:00:00Z"}`,
 	}
 
-	filtered := filterLogs(logLines, "error", []string{"zap", "klog"})
+	filtered := filterLogs(logLines, []string{"error", "warn"}, []string{"zap", "klog"})
 	for _, log := range filtered {
 		fmt.Println(log)
 	}
